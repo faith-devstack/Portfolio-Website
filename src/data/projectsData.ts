@@ -1,0 +1,60 @@
+import { Project } from '../types';
+
+export const projectsData: Project[] = [
+  {
+    id: '1',
+    title: 'PACE E-Commerce',
+    description: 'A comprehensive full-stack e-commerce platform featuring product browsing, cart management, and seamless checkout processing.',
+    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1000',
+    category: 'Full-Stack',
+    techStack: ['React', 'Node.js', 'Express', 'MongoDB'],
+    liveLink: 'https://dr-tee-frontend.onrender.com',
+    githubLink: '#',
+  },
+  {
+    id: '2',
+    title: 'Subscription Tracker API',
+    description: 'A robust backend REST API built to track user subscriptions, manage billing cycles, and structure data securely.',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1000',
+    category: 'Backend & APIs',
+    techStack: ['Node.js', 'Express', 'PostgreSQL', 'JWT'],
+    githubLink: '#',
+  },
+  {
+    id: '3',
+    title: 'Modern Landing Page',
+    description: 'A high-conversion, responsive frontend landing page with smooth scroll animations and modern UI principles.',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000',
+    category: 'Frontend',
+    techStack: ['React', 'Tailwind CSS', 'Framer Motion'],
+    githubLink: '#',
+  },
+  {
+    id: '4',
+    title: 'Ongoing SaaS Platform',
+    description: 'An in-development Software-as-a-Service application focusing on optimizing business workflow automation and user management.',
+    image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=1000',
+    category: 'Full-Stack',
+    techStack: ['Next.js', 'TypeScript', 'Prisma', 'Tailwind CSS'],
+  },
+  {
+    id: '5',
+    title: 'Bootstrap Portfolio Page',
+    description: 'A classic, fully responsive landing page built utilizing Bootstrap to ensure maximum cross-browser compatibility.',
+    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1000',
+    category: 'Frontend',
+    techStack: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript'],
+    liveLink: 'https://prixima-landing-page.vercel.app/',
+    githubLink: '#',
+  },
+  {
+    id: '6',
+    title: 'Family Tree Visualizer',
+    description: 'An interactive web application that allows users to map, visualize, and dynamically explore their ancestral lineage.',
+    image: 'https://images.unsplash.com/photo-1529156069898-49953eb1b5ae?auto=format&fit=crop&q=80&w=1000',
+    category: 'Frontend',
+    techStack: ['React', 'CSS Modules', 'D3.js'],
+    liveLink: 'https://akinlemibola-family-tree.vercel.app/',
+    githubLink: '#',
+  }
+];

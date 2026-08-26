@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cyber-bg: #080C14;
+  --color-cyber-card: #0F172A;
+  --color-cyber-border: #1E293B;
+  --color-cyber-cyan: #06B6D4;
+  --color-cyber-cyan-glow: #00F0FF;
+}
+
+body {
+  @apply bg-cyber-bg text-slate-300 antialiased selection:bg-cyber-cyan/30 selection:text-white;
+}
+
+/* Custom scrollbar for cyber theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080C14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #06B6D4;
+}
