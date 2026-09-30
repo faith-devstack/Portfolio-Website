@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="sub-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0E14" />
+      <stop offset="100%" stop-color="#121722" />
+    </linearGradient>
+    <linearGradient id="bar-teal" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#1A4A45" />
+      <stop offset="100%" stop-color="#2FA499" />
+    </linearGradient>
+    <linearGradient id="bar-blue" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#1E3A5F" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="750" fill="url(#sub-bg)" />
+
+  <!-- Window Container -->
+  <g transform="translate(80, 50)">
+    <rect width="1040" height="650" rx="8" fill="#0F131C" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1" />
+    
+    <!-- Window Header -->
+    <rect width="1040" height="42" rx="8" fill="#151A26" />
+    <circle cx="24" cy="21" r="5" fill="#EF4444" fill-opacity="0.6" />
+    <circle cx="42" cy="21" r="5" fill="#EAB308" fill-opacity="0.6" />
+    <circle cx="60" cy="21" r="5" fill="#22C55E" fill-opacity="0.6" />
+
+    <rect x="280" y="8" width="480" height="26" rx="4" fill="#0B0E14" stroke="#FFFFFF" stroke-opacity="0.08" />
+    <text x="520" y="25" fill="#717A8A" font-family="monospace" font-size="11" text-anchor="middle">
+      sub-track-alpha.vercel.app · Centralized Subscription Dashboard
+    </text>
+
+    <!-- App Shell Inner -->
+    <g transform="translate(0, 42)">
+      <!-- Left Sidebar Navigation (200px) -->
+      <rect width="200" height="608" fill="#0C0F17" stroke="#FFFFFF" stroke-opacity="0.06" />
+      
+      <!-- Brand Logo in Sidebar -->
+      <g transform="translate(24, 28)">
+        <rect width="28" height="28" rx="6" fill="#2FA499" />
+        <path d="M8 14 L13 19 L20 9" stroke="#0D0F11" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        <text x="38" y="19" fill="#F6F4EE" font-family="sans-serif" font-weight="700" font-size="16" letter-spacing="-0.5">
+          SubTrack
+        </text>
+      </g>
+
+      <!-- Sidebar Menu Items -->
+      <g transform="translate(16, 85)">
+        <!-- Active Dashboard -->
+        <rect width="168" height="34" rx="4" fill="#18202E" />
+        <circle cx="20" cy="17" r="4" fill="#2FA499" />
+        <text x="36" y="21" fill="#F6F4EE" font-family="sans-serif" font-size="13" font-weight="500">Dashboard</text>
+
+        <g transform="translate(0, 42)">
+          <text x="36" y="21" fill="#717A8A" font-family="sans-serif" font-size="13">Subscriptions</text>
+        </g>
+        <g transform="translate(0, 80)">
+          <text x="36" y="21" fill="#717A8A" font-family="sans-serif" font-size="13">Analytics &amp; Trends</text>
+        </g>
+        <g transform="translate(0, 118)">
+          <text x="36" y="21" fill="#717A8A" font-family="sans-serif" font-size="13">Admin Panel</text>
+        </g>
+        <g transform="translate(0, 156)">
+          <text x="36" y="21" fill="#717A8A" font-family="sans-serif" font-size="13">Account Settings</text>
+        </g>
+      </g>
+
+      <!-- Sidebar Bottom Service Pill -->
+      <g transform="translate(16, 520)">
+        <rect width="168" height="60" rx="4" fill="#131824" stroke="#FFFFFF" stroke-opacity="0.06" />
+        <text x="12" y="24" fill="#2FA499" font-family="monospace" font-size="9" letter-spacing="1">SERVICE STATUS</text>
+        <text x="12" y="44" fill="#8B95A5" font-family="sans-serif" font-size="11">Firebase Sync · Active</text>
+      </g>
+
+      <!-- Main Dashboard Canvas Area (Right of Sidebar) -->
+      <g transform="translate(224, 24)">
+        
+        <!-- Top Title & Action Bar -->
+        <text x="0" y="24" fill="#F6F4EE" font-family="sans-serif" font-weight="600" font-size="20">
+          Financial Overview
+        </text>
+        <text x="0" y="44" fill="#717A8A" font-family="sans-serif" font-size="12">
+          Tracking recurring expenses and upcoming payment obligations
+        </text>
+
+        <rect x="630" y="4" width="150" height="34" rx="4" fill="#2FA499" />
+        <text x="705" y="25" fill="#0D0F11" font-family="sans-serif" font-weight="600" font-size="12" text-anchor="middle">
+          + Add Subscription
+        </text>
+
+        <!-- 3 KPI Summary Cards -->
+        <g transform="translate(0, 65)">
+          <!-- Card 1: Total Monthly -->
+          <rect width="248" height="96" rx="6" fill="#131824" stroke="#FFFFFF" stroke-opacity="0.08" />
+          <text x="18" y="26" fill="#717A8A" font-family="monospace" font-size="10" letter-spacing="1">TOTAL MONTHLY SPEND</text>
+          <text x="18" y="60" fill="#F6F4EE" font-family="sans-serif" font-weight="700" font-size="24">$348.50</text>
+          <text x="18" y="80" fill="#2FA499" font-family="sans-serif" font-size="11">↑ 4.2% from last cycle</text>
+
+          <!-- Card 2: Active Subscriptions -->
+          <g transform="translate(264, 0)">
+            <rect width="248" height="96" rx="6" fill="#131824" stroke="#FFFFFF" stroke-opacity="0.08" />
+            <text x="18" y="26" fill="#717A8A" font-family="monospace" font-size="10" letter-spacing="1">ACTIVE SUBSCRIPTIONS</text>
+            <text x="18" y="60" fill="#F6F4EE" font-family="sans-serif" font-weight="700" font-size="24">14 Services</text>
+            <text x="18" y="80" fill="#8B95A5" font-family="sans-serif" font-size="11">5 SaaS · 4 Cloud · 5 Media</text>
+          </g>
+
+          <!-- Card 3: Upcoming Renewals -->
+          <g transform="translate(528, 0)">
+            <rect width="252" height="96" rx="6" fill="#131824" stroke="#FFFFFF" stroke-opacity="0.08" />
+            <text x="18" y="26" fill="#717A8A" font-family="monospace" font-size="10" letter-spacing="1">RENEWALS NEXT 7 DAYS</text>
+            <text x="18" y="60" fill="#FBBF24" font-family="sans-serif" font-weight="700" font-size="24">3 Approaching</text>
+            <text x="18" y="80" fill="#8B95A5" font-family="sans-serif" font-size="11">$54.00 scheduled charge</text>
+          </g>
+        </g>
+
+        <!-- Lower Section: Active Subscriptions Table (Left) + Spending Graph (Right) -->
+        <g transform="translate(0, 180)">
+          
+          <!-- Subscriptions Table List (480px wide) -->
+          <rect width="480" height="340" rx="6" fill="#131824" stroke="#FFFFFF" stroke-opacity="0.08" />
+          <text x="20" y="28" fill="#F6F4EE" font-family="sans-serif" font-weight="600" font-size="14">
+            Monitored Subscriptions
+          </text>
+          <text x="460" y="28" fill="#2FA499" font-family="monospace" font-size="10" text-anchor="end">
+            VIEW ALL (14)
+          </text>
+
+          <!-- Table Header -->
+          <line x1="20" y1="44" x2="460" y2="44" stroke="#FFFFFF" stroke-opacity="0.08" />
+          <text x="20" y="60" fill="#717A8A" font-family="monospace" font-size="10">NAME &amp; CATEGORY</text>
+          <text x="260" y="60" fill="#717A8A" font-family="monospace" font-size="10">NEXT BILLING</text>
+          <text x="460" y="60" fill="#717A8A" font-family="monospace" font-size="10" text-anchor="end">PRICE</text>
+
+          <!-- Row 1: GitHub Copilot -->
+          <g transform="translate(20, 75)">
+            <rect width="24" height="24" rx="4" fill="#1F2937" />
+            <text x="12" y="16" fill="#F6F4EE" font-family="monospace" font-size="10" text-anchor="middle">GH</text>
+            <text x="36" y="12" fill="#F6F4EE" font-family="sans-serif" font-size="12" font-weight="500">GitHub Copilot</text>
+            <text x="36" y="26" fill="#717A8A" font-family="sans-serif" font-size="10">Developer Tools</text>
+            <text x="240" y="18" fill="#8B95A5" font-family="sans-serif" font-size="11">Oct 04, 2026</text>
+            <text x="440" y="18" fill="#F6F4EE" font-family="sans-serif" font-weight="600" font-size="12" text-anchor="end">$10.00/mo</text>
+          </g>
+
+          <!-- Row 2: Vercel Pro -->
+          <g transform="translate(20, 125)">
+            <rect width="24" height="24" rx="4" fill="#000000" />
+            <text x="12" y="16" fill="#F6F4EE" font-family="monospace" font-size="10" text-anchor="middle">▲</text>
+            <text x="36" y="12" fill="#F6F4EE" font-family="sans-serif" font-size="12" font-weight="500">Vercel Pro Tier</text>
+            <text x="36" y="26" fill="#717A8A" font-family="sans-serif" font-size="10">Cloud Infrastructure</text>
+            <text x="240" y="18" fill="#8B95A5" font-family="sans-serif" font-size="11">Oct 12, 2026</text>
+            <text x="440" y="18" fill="#F6F4EE" font-family="sans-serif" font-weight="600" font-size="12" text-anchor="end">$20.00/mo</text>
+          </g>
+
+          <!-- Row 3: Figma Pro -->
+          <g transform="translate(20, 175)">
+            <rect width="24" height="24" rx="4" fill="#2E1065" />
+            <text x="12" y="16" fill="#C084FC" font-family="monospace" font-size="10" text-anchor="middle">F</text>
+            <text x="36" y="12" fill="#F6F4EE" font-family="sans-serif" font-size="12" font-weight="500">Figma Professional</text>
+            <text x="36" y="26" fill="#717A8A" font-family="sans-serif" font-size="10">Design Systems</text>
+            <text x="240" y="18" fill="#8B95A5" font-family="sans-serif" font-size="11">Oct 18, 2026</text>
+            <text x="440" y="18" fill="#F6F4EE" font-family="sans-serif" font-weight="600" font-size="12" text-anchor="end">$15.00/mo</text>
+          </g>
+
+          <!-- Row 4: AWS Services -->
+          <g transform="translate(20, 225)">
+            <rect width="24" height="24" rx="4" fill="#451A03" />
+            <text x="12" y="16" fill="#FB923C" font-family="monospace" font-size="10" text-anchor="middle">☁</text>
+            <text x="36" y="12" fill="#F6F4EE" font-family="sans-serif" font-size="12" font-weight="500">AWS Infrastructure</text>
+            <text x="36" y="26" fill="#717A8A" font-family="sans-serif" font-size="10">Database &amp; Compute</text>
+            <text x="240" y="18" fill="#8B95A5" font-family="sans-serif" font-size="11">Oct 24, 2026</text>
+            <text x="440" y="18" fill="#F6F4EE" font-family="sans-serif" font-weight="600" font-size="12" text-anchor="end">$84.20/mo</text>
+          </g>
+
+          <!-- Row 5: Spotify Premium -->
+          <g transform="translate(20, 275)">
+            <rect width="24" height="24" rx="4" fill="#064E3B" />
+            <text x="12" y="16" fill="#34D399" font-family="monospace" font-size="10" text-anchor="middle">♫</text>
+            <text x="36" y="12" fill="#F6F4EE" font-family="sans-serif" font-size="12" font-weight="500">Spotify Family</text>
+            <text x="36" y="26" fill="#717A8A" font-family="sans-serif" font-size="10">Digital Media</text>
+            <text x="240" y="18" fill="#8B95A5" font-family="sans-serif" font-size="11">Oct 29, 2026</text>
+            <text x="440" y="18" fill="#F6F4EE" font-family="sans-serif" font-weight="600" font-size="12" text-anchor="end">$16.99/mo</text>
+          </g>
+
+          <!-- Right: Spending Breakdown Chart (280px wide) -->
+          <g transform="translate(500, 0)">
+            <rect width="280" height="340" rx="6" fill="#131824" stroke="#FFFFFF" stroke-opacity="0.08" />
+            <text x="20" y="28" fill="#F6F4EE" font-family="sans-serif" font-weight="600" font-size="14">
+              Monthly Breakdown
+            </text>
+            
+            <!-- Category Mini Bars -->
+            <g transform="translate(20, 60)">
+              <text x="0" y="10" fill="#8B95A5" font-family="sans-serif" font-size="11">Cloud Infrastructure (42%)</text>
+              <rect x="0" y="18" width="240" height="6" rx="3" fill="#1F2937" />
+              <rect x="0" y="18" width="100" height="6" rx="3" fill="url(#bar-blue)" />
+
+              <text x="0" y="55" fill="#8B95A5" font-family="sans-serif" font-size="11">Developer Tools (28%)</text>
+              <rect x="0" y="63" width="240" height="6" rx="3" fill="#1F2937" />
+              <rect x="0" y="63" width="68" height="6" rx="3" fill="url(#bar-teal)" />
+
+              <text x="0" y="100" fill="#8B95A5" font-family="sans-serif" font-size="11">Design &amp; Media (30%)</text>
+              <rect x="0" y="108" width="240" height="6" rx="3" fill="#1F2937" />
+              <rect x="0" y="108" width="72" height="6" rx="3" fill="#C084FC" />
+            </g>
+
+            <!-- Technical Integration Callout -->
+            <g transform="translate(20, 215)">
+              <rect width="240" height="95" rx="4" fill="#0C0F17" stroke="#2FA499" stroke-opacity="0.3" />
+              <text x="12" y="22" fill="#2FA499" font-family="monospace" font-size="9" letter-spacing="1">APPLICATION ARCHITECTURE</text>
+              <text x="12" y="42" fill="#F6F4EE" font-family="sans-serif" font-size="11" font-weight="500">React + Vite + Firebase</text>
+              <text x="12" y="60" fill="#717A8A" font-family="sans-serif" font-size="10" leading="relaxed">
+                Centralized state management, realtime
+              </text>
+              <text x="12" y="74" fill="#717A8A" font-family="sans-serif" font-size="10">
+                Firestore sync and ongoing feature roadmap.
+              </text>
+            </g>
+          </g>
+
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

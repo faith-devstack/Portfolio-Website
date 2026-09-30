@@ -7,6 +7,10 @@ export interface Project {
   techStack: string[];
   liveLink?: string;
   githubLink?: string;
+  year?: string;
+  role?: string;
+  highlights?: string[];
+  architectureSummary?: string;
 }
 
 export interface SkillCategory {
@@ -19,4 +23,5 @@ export interface ProcessStep {
   title: string;
   description: string;
   icon: string;
+  detail?: string;
 }

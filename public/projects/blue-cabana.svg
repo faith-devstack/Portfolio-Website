@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E0F12" />
+      <stop offset="50%" stop-color="#14161B" />
+      <stop offset="100%" stop-color="#0A0B0E" />
+    </linearGradient>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2B170" />
+      <stop offset="100%" stop-color="#B28246" />
+    </linearGradient>
+    <linearGradient id="teal-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2FA499" />
+      <stop offset="100%" stop-color="#4FD1C5" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="30" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Base Canvas -->
+  <rect width="1200" height="750" fill="url(#bg-grad)" />
+
+  <!-- Subtle Architectural Grid Hairlines -->
+  <line x1="80" y1="0" x2="80" y2="750" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1" />
+  <line x1="1120" y1="0" x2="1120" y2="750" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1" />
+  <line x1="0" y1="80" x2="1200" y2="80" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1" />
+  <line x1="0" y1="670" x2="1200" y2="670" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1" />
+
+  <!-- Ambient Light Reflection -->
+  <circle cx="600" cy="380" r="280" fill="#E2B170" fill-opacity="0.05" filter="url(#glow)" />
+  <circle cx="850" cy="220" r="180" fill="#2FA499" fill-opacity="0.04" filter="url(#glow)" />
+
+  <!-- Browser/Window Mockup Frame -->
+  <g transform="translate(100, 70)">
+    <!-- Window Border & Body -->
+    <rect width="1000" height="600" rx="6" fill="#121418" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1" />
+    
+    <!-- Top Chrome Header -->
+    <rect width="1000" height="44" rx="6" fill="#181B21" />
+    <circle cx="24" cy="22" r="5" fill="#EF4444" fill-opacity="0.7" />
+    <circle cx="42" cy="22" r="5" fill="#EAB308" fill-opacity="0.7" />
+    <circle cx="60" cy="22" r="5" fill="#22C55E" fill-opacity="0.7" />
+
+    <!-- URL Bar -->
+    <rect x="260" y="9" width="480" height="26" rx="4" fill="#0E1014" stroke="#FFFFFF" stroke-opacity="0.06" />
+    <text x="500" y="26" fill="#8E939D" font-family="monospace" font-size="11" text-anchor="middle">
+      blucabana-website.vercel.app · Cinematic Hospitality Concept
+    </text>
+
+    <!-- Project Brand Navigation -->
+    <g transform="translate(40, 70)">
+      <text x="0" y="24" fill="#F6F4EE" font-family="serif" font-size="20" font-weight="600" letter-spacing="3">
+        BLUE CABANA
+      </text>
+      <text x="175" y="23" fill="#B28246" font-family="monospace" font-size="10" letter-spacing="2">
+        EST. RESTAURANT &amp; LOUNGE
+      </text>
+
+      <!-- Nav Items -->
+      <text x="650" y="22" fill="#A8A398" font-family="sans-serif" font-size="12" letter-spacing="1">TASTING</text>
+      <text x="730" y="22" fill="#A8A398" font-family="sans-serif" font-size="12" letter-spacing="1">COFFEE</text>
+      <text x="810" y="22" fill="#A8A398" font-family="sans-serif" font-size="12" letter-spacing="1">EXPERIENCE</text>
+      <rect x="900" y="6" width="60" height="26" rx="2" fill="none" stroke="#E2B170" stroke-width="1" stroke-opacity="0.6" />
+      <text x="930" y="23" fill="#E2B170" font-family="sans-serif" font-size="11" text-anchor="middle">DISCOVER</text>
+    </g>
+
+    <!-- Main Hero Visual & Headline -->
+    <g transform="translate(60, 150)">
+      
+      <!-- Left Column: Storytelling Headline -->
+      <g transform="translate(0, 40)">
+        <text x="0" y="0" fill="#2FA499" font-family="monospace" font-size="11" letter-spacing="3">
+          SCROLL-DRIVEN VISUAL STORYTELLING
+        </text>
+        <text x="0" y="45" fill="#F6F4EE" font-family="serif" font-size="44" font-weight="300" letter-spacing="-1">
+          A Symphony of Taste
+        </text>
+        <text x="0" y="95" fill="#E2B170" font-family="serif" font-style="italic" font-size="44" font-weight="300" letter-spacing="-0.5">
+          &amp; Timeless Atmosphere.
+        </text>
+        <text x="0" y="145" fill="#9CA3AF" font-family="sans-serif" font-size="13" font-weight="300">
+          Crafted culinary hospitality brought to life through seamless frame-based
+        </text>
+        <text x="0" y="168" fill="#9CA3AF" font-family="sans-serif" font-size="13" font-weight="300">
+          scroll-scrubbed reveals, GSAP kinematics, and refined editorial typography.
+        </text>
+
+        <!-- Technical Badges Unboxed -->
+        <g transform="translate(0, 210)">
+          <rect width="140" height="28" rx="2" fill="#1C1F26" stroke="#FFFFFF" stroke-opacity="0.1" />
+          <circle cx="16" cy="14" r="3" fill="#2FA499" />
+          <text x="28" y="18" fill="#F6F4EE" font-family="monospace" font-size="10">FRAME SCRUBBING</text>
+
+          <rect x="150" width="130" height="28" rx="2" fill="#1C1F26" stroke="#FFFFFF" stroke-opacity="0.1" />
+          <circle cx="166" cy="14" r="3" fill="#E2B170" />
+          <text x="178" y="18" fill="#F6F4EE" font-family="monospace" font-size="10">GSAP TIMELINE</text>
+        </g>
+      </g>
+
+      <!-- Right Column: Cinematic Image Sequence Stage Mockup -->
+      <g transform="translate(520, 10)">
+        <!-- Media Container Outer Frame -->
+        <rect width="360" height="270" rx="4" fill="#0C0D10" stroke="#FFFFFF" stroke-opacity="0.16" />
+        
+        <!-- Atmospheric Art Graphic (Espresso & Restaurant Ambiance) -->
+        <path d="M40 220 C 100 160, 140 180, 180 120 C 220 60, 280 80, 320 220 Z" fill="#1F1B16" opacity="0.6" />
+        <circle cx="180" cy="120" r="50" fill="#E2B170" fill-opacity="0.12" filter="url(#glow)" />
+        <circle cx="180" cy="120" r="28" fill="#E2B170" fill-opacity="0.25" />
+        <circle cx="180" cy="120" r="10" fill="#E2B170" />
+
+        <!-- Cinematic Coffee Steam / Motion Waves -->
+        <path d="M175 90 Q 185 70, 175 50 T 180 20" stroke="#E2B170" stroke-width="1.5" stroke-opacity="0.4" fill="none" />
+        <path d="M185 90 Q 175 70, 185 50 T 180 20" stroke="#E2B170" stroke-width="1.5" stroke-opacity="0.4" fill="none" />
+
+        <!-- Floating Frame Metadata Overlay -->
+        <rect x="20" y="20" width="160" height="26" rx="2" fill="#000000" fill-opacity="0.75" stroke="#FFFFFF" stroke-opacity="0.1" />
+        <text x="30" y="37" fill="#4FD1C5" font-family="monospace" font-size="10">REEL_INDEX // 048 / 120</text>
+
+        <!-- Live Scrubbing Scrubber Bar -->
+        <rect x="20" y="225" width="320" height="24" rx="2" fill="#000000" fill-opacity="0.8" stroke="#FFFFFF" stroke-opacity="0.08" />
+        <!-- Progress track -->
+        <rect x="30" y="235" width="230" height="4" rx="2" fill="#242831" />
+        <rect x="30" y="235" width="140" height="4" rx="2" fill="url(#teal-accent)" />
+        <circle cx="170" cy="237" r="5" fill="#F6F4EE" stroke="#2FA499" stroke-width="2" />
+        <text x="270" y="240" fill="#A8A398" font-family="monospace" font-size="9">60 FPS</text>
+        <text x="315" y="240" fill="#2FA499" font-family="monospace" font-size="9">PINNED</text>
+      </g>
+    </g>
+
+    <!-- Bottom Indicator Strip -->
+    <g transform="translate(60, 520)">
+      <line x1="0" y1="0" x2="880" y2="0" stroke="#FFFFFF" stroke-opacity="0.08" />
+      <text x="0" y="25" fill="#6E6960" font-family="monospace" font-size="10">
+        FRONTEND ARCHITECTURE · REACT + TYPESCRIPT + TAILWIND CSS + GSAP + FRAMER MOTION
+      </text>
+      <text x="880" y="25" fill="#2FA499" font-family="monospace" font-size="10" text-anchor="end">
+        INTERACTIVE PREVIEW
+      </text>
+    </g>
+  </g>
+</svg>
