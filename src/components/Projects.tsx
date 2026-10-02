@@ -30,58 +30,58 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-16 lg:mb-24">
+        <div className="max-w-3xl mb-16 lg:mb-20">
           <div className="flex items-center gap-2.5 text-xs font-mono uppercase tracking-widest text-[#2FA499] mb-3">
             <span>01</span>
-            <span className="text-[#6E6960]">/</span>
+            <span className="text-[#8E8A80]">/</span>
             <span>Curated Works</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-[#F6F4EE] tracking-tight">
-            Selected <span className="font-serif italic text-[#F6F4EE]">projects</span> & engineering cases.
+            Selected <span className="font-serif italic text-[#F6F4EE]">projects</span> &amp; engineering cases.
           </h2>
-          <p className="text-sm sm:text-base text-[#A8A398] mt-4 leading-relaxed font-normal">
+          <p className="text-base text-[#C8C4BA] mt-4 leading-relaxed font-normal">
             A verified collection of production web applications, interaction architectures, and full-stack systems built with structural discipline and clean aesthetics.
           </p>
         </div>
 
         {/* 1. PRIMARY FLAGSHIP FEATURE — Blue Cabana */}
         <div className="mb-20 lg:mb-28">
-          <div className="text-[11px] font-mono tracking-widest uppercase text-[#6E6960] mb-4 flex items-center justify-between">
+          <div className="text-xs font-mono tracking-widest uppercase text-[#9E988D] mb-4 flex items-center justify-between">
             <span className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#2FA499]" />
-              <span className="text-[#2FA499]">FLAGSHIP MOTION FEATURE</span>
+              <span className="text-[#2FA499] font-medium">FLAGSHIP MOTION FEATURE</span>
             </span>
-            <span>CASE_01 · {primaryFeatured.year || '2025'}</span>
+            <span className="text-[#B8B4AA]">CASE_01 · {primaryFeatured.year || '2025'}</span>
           </div>
 
-          <article className="group bg-[#14171A] border border-white/[0.08] hover:border-white/[0.18] transition-all duration-300 rounded-sm overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
+          <article className="group bg-[#14171A] border border-white/[0.12] hover:border-white/[0.22] transition-all duration-300 rounded-sm overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch shadow-xl">
             
             {/* Left 7 cols: Refined Visual Frame for Blue Cabana */}
             <div
               onClick={() => setSelectedProject(primaryFeatured)}
-              className="lg:col-span-7 relative aspect-[16/10] lg:aspect-auto w-full bg-[#1B1F24] overflow-hidden cursor-pointer select-none"
+              className="lg:col-span-7 relative aspect-[16/10] lg:aspect-auto w-full min-h-[280px] sm:min-h-[380px] bg-[#1B1F24] overflow-hidden cursor-pointer select-none"
             >
               <img
                 src={primaryFeatured.image}
                 alt={primaryFeatured.title}
-                className="w-full h-full object-cover object-center filter saturate-[0.92] contrast-[1.05] group-hover:scale-[1.015] transition-transform duration-700 ease-out"
+                className="w-full h-full object-cover object-center filter saturate-[0.95] contrast-[1.05] group-hover:scale-[1.015] transition-transform duration-700 ease-out"
               />
               {/* Subtle charcoal gradient scrim */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0F11]/85 via-[#0D0F11]/15 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0F11]/85 via-[#0D0F11]/20 to-transparent pointer-events-none" />
 
               {/* Quiet overlay label communicating the cinematic experience */}
-              <div className="absolute bottom-4 left-4 z-10 flex items-center gap-2 text-[11px] font-mono text-[#F6F4EE]/90 bg-[#0D0F11]/85 backdrop-blur-sm px-3 py-1.5 border border-white/[0.08] rounded-sm">
+              <div className="absolute bottom-4 left-4 z-10 flex items-center gap-2 text-xs font-mono text-[#F6F4EE] bg-[#0D0F11]/90 backdrop-blur-sm px-3.5 py-1.5 border border-white/[0.1] rounded-sm">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2FA499]" />
                 <span>Cinematic Frame-Scrubbed Animation</span>
               </div>
             </div>
 
             {/* Right 5 cols: Project Narrative & Accessible Controls */}
-            <div className="lg:col-span-5 p-8 sm:p-10 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-white/[0.08]">
+            <div className="lg:col-span-5 p-8 sm:p-10 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-white/[0.1] bg-[#14171A]">
               <div>
-                <div className="flex items-center justify-between text-xs font-mono text-[#6E6960] mb-3">
-                  <span className="uppercase text-[#2FA499]">{primaryFeatured.category}</span>
-                  <span>{primaryFeatured.role}</span>
+                <div className="flex items-center justify-between text-xs font-mono mb-3.5">
+                  <span className="uppercase text-[#2FA499] font-medium">{primaryFeatured.category}</span>
+                  <span className="text-[#9E988D]">{primaryFeatured.role}</span>
                 </div>
 
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-light text-[#F6F4EE] tracking-tight mb-4">
@@ -94,12 +94,12 @@ export default function Projects() {
                   </button>
                 </h3>
 
-                <p className="text-sm sm:text-base text-[#A8A398] leading-relaxed mb-6 font-normal">
+                <p className="text-sm sm:text-base text-[#C8C4BA] leading-relaxed mb-6 font-normal">
                   {primaryFeatured.description}
                 </p>
 
                 {/* Key Technical Highlights */}
-                <div className="space-y-2 mb-8 text-xs text-[#D5D1C7]">
+                <div className="space-y-2.5 mb-8 text-xs sm:text-sm text-[#E2DFD7]">
                   {primaryFeatured.highlights?.map((highlight, idx) => (
                     <div key={idx} className="flex items-start gap-2.5">
                       <span className="text-[#2FA499] mt-0.5 font-mono">―</span>
@@ -111,10 +111,10 @@ export default function Projects() {
 
               <div>
                 {/* Tech Stack Unboxed (Zero-Pill) */}
-                <div className="py-4 border-t border-white/[0.08] text-xs font-mono text-[#6E6960] flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-6">
+                <div className="py-4 border-t border-white/[0.08] text-xs font-mono text-[#9E988D] flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-6">
                   {primaryFeatured.techStack.map((tech, idx) => (
                     <span key={tech} className="inline-flex items-center">
-                      <span className="text-[#A8A398]">{tech}</span>
+                      <span className="text-[#E2DFD7]">{tech}</span>
                       {idx < primaryFeatured.techStack.length - 1 && (
                         <span className="ml-2.5 text-[#6E6960]">·</span>
                       )}
@@ -154,7 +154,7 @@ export default function Projects() {
                     onClick={() => setSelectedProject(primaryFeatured)}
                     className="min-h-[44px] inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#F6F4EE] bg-[#1B1F24] hover:bg-[#22272E] border border-white/[0.1] hover:border-[#2FA499]/40 transition-colors rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#2FA499]"
                   >
-                    <span>Architecture & Details</span>
+                    <span>Architecture Details</span>
                     <ArrowUpRight className="w-3.5 h-3.5 text-[#2FA499]" />
                   </button>
                 </div>
@@ -166,52 +166,52 @@ export default function Projects() {
 
         {/* 2. VERIFIED DEPLOYED WORKS (SubTrack, PACE E-Commerce, Family Tree Visualizer) */}
         <div>
-          <div className="flex items-center justify-between pb-4 border-b border-white/[0.08] mb-8">
-            <div className="text-[11px] font-mono tracking-widest uppercase text-[#6E6960] flex items-center gap-2">
+          <div className="flex items-center justify-between pb-4 border-b border-white/[0.08] mb-8 sm:mb-10">
+            <div className="text-xs font-mono tracking-widest uppercase text-[#9E988D] flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#2FA499]" />
-              <span>LIVE APPLICATION CASES ({secondaryProjects.length})</span>
+              <span className="text-[#F6F4EE]">APPLICATION CASES ({secondaryProjects.length})</span>
             </div>
-            <span className="text-xs font-mono text-[#6E6960]">
+            <span className="text-xs font-mono text-[#2FA499]">
               VERIFIED WORKING DEPLOYMENTS
             </span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {secondaryProjects.map((project, index) => (
               <article
                 key={project.id}
-                className="group flex flex-col justify-between bg-[#14171A] border border-white/[0.08] hover:border-white/[0.18] transition-all duration-300 rounded-sm overflow-hidden"
+                className="group flex flex-col justify-between bg-[#14171A] border border-white/[0.1] hover:border-white/[0.22] transition-all duration-300 rounded-sm overflow-hidden shadow-lg"
               >
                 {/* Visual Area */}
                 <div>
                   <div
                     onClick={() => setSelectedProject(project)}
-                    className="relative aspect-[16/10] w-full bg-[#1B1F24] overflow-hidden cursor-pointer select-none border-b border-white/[0.06]"
+                    className="relative aspect-[16/10] w-full bg-[#1B1F24] overflow-hidden cursor-pointer select-none border-b border-white/[0.08]"
                   >
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover object-center filter saturate-[0.92] contrast-[1.05] group-hover:scale-[1.015] transition-transform duration-700 ease-out"
+                      className="w-full h-full object-cover object-center filter saturate-[0.95] contrast-[1.05] group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0D0F11]/80 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0D0F11]/85 via-transparent to-transparent pointer-events-none" />
 
                     {/* Corner Tag */}
-                    <div className="absolute top-3 left-3 z-10 text-[10px] font-mono text-[#F6F4EE]/90 bg-[#0D0F11]/80 backdrop-blur-sm px-2.5 py-1 border border-white/[0.08] rounded-sm uppercase tracking-wider">
+                    <div className="absolute top-3 left-3 z-10 text-[11px] font-mono text-[#F6F4EE] bg-[#0D0F11]/85 backdrop-blur-sm px-2.5 py-1 border border-white/[0.1] rounded-sm uppercase tracking-wider">
                       {project.category}
                     </div>
 
-                    <div className="absolute bottom-3 right-3 z-10 text-[10px] font-mono text-[#A8A398] bg-[#0D0F11]/80 backdrop-blur-sm px-2.5 py-1 border border-white/[0.08] rounded-sm">
+                    <div className="absolute bottom-3 right-3 z-10 text-[11px] font-mono text-[#C8C4BA] bg-[#0D0F11]/85 backdrop-blur-sm px-2.5 py-1 border border-white/[0.1] rounded-sm">
                       CASE_0{index + 2} · {project.year}
                     </div>
                   </div>
 
                   {/* Content Area */}
                   <div className="p-6 sm:p-7">
-                    <div className="flex items-center justify-between text-xs font-mono text-[#6E6960] mb-2">
-                      <span className="text-[#2FA499]">{project.role}</span>
+                    <div className="flex items-center justify-between text-xs font-mono mb-2">
+                      <span className="text-[#2FA499] font-medium">{project.role}</span>
                     </div>
 
-                    <h4 className="text-xl font-light text-[#F6F4EE] tracking-tight mb-3">
+                    <h4 className="text-xl sm:text-2xl font-light text-[#F6F4EE] tracking-tight mb-3">
                       <button
                         type="button"
                         onClick={() => setSelectedProject(project)}
@@ -221,16 +221,16 @@ export default function Projects() {
                       </button>
                     </h4>
 
-                    <p className="text-xs sm:text-sm text-[#A8A398] leading-relaxed mb-6 font-normal line-clamp-3">
+                    <p className="text-sm text-[#C8C4BA] leading-relaxed mb-6 font-normal line-clamp-3">
                       {project.description}
                     </p>
 
                     {/* Highlights Preview */}
-                    <div className="space-y-1.5 mb-6 text-xs text-[#D5D1C7]">
+                    <div className="space-y-2 mb-6 text-xs sm:text-sm text-[#E2DFD7]">
                       {project.highlights?.slice(0, 2).map((item, idx) => (
                         <div key={idx} className="flex items-start gap-2">
                           <span className="text-[#2FA499] font-mono">―</span>
-                          <span className="line-clamp-1">{item}</span>
+                          <span className="line-clamp-1 leading-relaxed">{item}</span>
                         </div>
                       ))}
                     </div>
@@ -240,10 +240,10 @@ export default function Projects() {
                 {/* Bottom Actions & Tech */}
                 <div className="p-6 sm:p-7 pt-0">
                   {/* Tech Stack List */}
-                  <div className="pt-4 border-t border-white/[0.08] text-xs font-mono text-[#6E6960] flex flex-wrap items-center gap-x-2 gap-y-1 mb-5">
+                  <div className="pt-4 border-t border-white/[0.08] text-xs font-mono text-[#9E988D] flex flex-wrap items-center gap-x-2 gap-y-1 mb-5">
                     {project.techStack.map((tech, idx) => (
                       <span key={tech} className="inline-flex items-center">
-                        <span className="text-[#A8A398]">{tech}</span>
+                        <span className="text-[#E2DFD7]">{tech}</span>
                         {idx < project.techStack.length - 1 && (
                           <span className="ml-2 text-[#6E6960]">·</span>
                         )}
@@ -306,112 +306,106 @@ export default function Projects() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedProject(null)}
-              className="absolute inset-0 bg-[#0D0F11]/88 backdrop-blur-sm"
+              className="absolute inset-0 bg-[#0D0F11]/90 backdrop-blur-md"
             />
 
             <motion.div
               initial={{ opacity: 0, scale: 0.98, y: 12 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.98, y: 12 }}
-              transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
               role="dialog"
               aria-modal="true"
               aria-labelledby="modal-title"
-              className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-[#14171A] border border-white/[0.14] rounded-sm p-6 sm:p-10 shadow-2xl z-10"
+              className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-[#14171A] border border-white/[0.16] rounded-sm p-6 sm:p-10 shadow-2xl z-10"
             >
-              {/* Top Controls */}
-              <div className="flex items-center justify-between border-b border-white/[0.08] pb-5 mb-7">
-                <div className="flex items-center gap-3 text-xs font-mono text-[#6E6960]">
-                  <span>CASE STUDY</span>
-                  <span>/</span>
-                  <span className="text-[#2FA499]">{selectedProject.category}</span>
+              <div className="flex items-start justify-between gap-4 pb-6 border-b border-white/[0.08] mb-6">
+                <div>
+                  <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#2FA499] mb-1">
+                    <span>{selectedProject.category}</span>
+                    <span className="text-[#8E8A80]">/</span>
+                    <span>{selectedProject.role}</span>
+                  </div>
+                  <h3 id="modal-title" className="text-2xl sm:text-3xl font-light text-[#F6F4EE] tracking-tight">
+                    {selectedProject.title}
+                  </h3>
                 </div>
+
                 <button
                   type="button"
                   onClick={() => setSelectedProject(null)}
-                  aria-label="Close project modal"
-                  className="min-h-[44px] min-w-[44px] flex items-center justify-center text-[#A8A398] hover:text-[#F6F4EE] rounded-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#2FA499]"
+                  aria-label="Close project details"
+                  className="min-h-[40px] min-w-[40px] flex items-center justify-center text-[#B8B4AA] hover:text-[#F6F4EE] bg-[#1B1F24] border border-white/[0.08] rounded-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#2FA499]"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-4 h-4" />
                 </button>
               </div>
 
-              {/* Title & Role */}
-              <div className="mb-6">
-                <span className="text-xs font-mono uppercase tracking-wider text-[#A8A398]">
-                  {selectedProject.role} · {selectedProject.year}
-                </span>
-                <h3 id="modal-title" className="text-3xl sm:text-4xl font-light text-[#F6F4EE] tracking-tight mt-1">
-                  {selectedProject.title}
-                </h3>
+              {/* Modal Visual Area */}
+              <div className="relative aspect-[16/10] w-full bg-[#1B1F24] border border-white/[0.08] rounded-sm overflow-hidden mb-6">
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="w-full h-full object-cover object-center"
+                />
               </div>
 
-              {/* Image Preview inside modal */}
-              {selectedProject.image && (
-                <div className="relative aspect-[16/9] w-full bg-[#1B1F24] border border-white/[0.08] rounded-sm overflow-hidden mb-8">
-                  <img
-                    src={selectedProject.image}
-                    alt={selectedProject.title}
-                    className="w-full h-full object-cover object-center"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D0F11]/60 to-transparent pointer-events-none" />
-                </div>
-              )}
-
-              {/* Overview */}
-              <div className="mb-8">
-                <h4 className="text-xs uppercase tracking-wider font-mono text-[#A8A398] mb-2">Scope & Summary</h4>
-                <p className="text-sm sm:text-base text-[#D5D1C7] leading-relaxed">
-                  {selectedProject.description}
-                </p>
-              </div>
-
-              {/* Architecture Summary */}
-              {selectedProject.architectureSummary && (
-                <div className="mb-8 p-5 bg-[#1B1F24] border border-white/[0.08] rounded-sm">
-                  <div className="flex items-center gap-2 text-xs font-mono text-[#2FA499] mb-2">
-                    <Layers className="w-4 h-4" />
-                    <span>System Architecture</span>
-                  </div>
-                  <p className="text-xs sm:text-sm text-[#A8A398] leading-relaxed">
-                    {selectedProject.architectureSummary}
+              {/* Narrative & Architecture Details */}
+              <div className="space-y-6 text-sm text-[#C8C4BA] leading-relaxed">
+                <div>
+                  <h4 className="text-xs font-mono uppercase tracking-widest text-[#2FA499] mb-2">
+                    Executive Overview
+                  </h4>
+                  <p className="text-sm sm:text-base text-[#E2DFD7] font-normal leading-relaxed">
+                    {selectedProject.description}
                   </p>
                 </div>
-              )}
 
-              {/* Highlights */}
-              {selectedProject.highlights && (
-                <div className="mb-8">
-                  <h4 className="text-xs uppercase tracking-wider font-mono text-[#A8A398] mb-3">Key Technical Highlights</h4>
-                  <ul className="space-y-2.5">
-                    {selectedProject.highlights.map((highlight, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-xs sm:text-sm text-[#D5D1C7]">
+                {selectedProject.architectureSummary && (
+                  <div className="p-4 bg-[#1B1F24] border border-white/[0.08] rounded-sm">
+                    <h4 className="text-xs font-mono uppercase tracking-widest text-[#2FA499] mb-2 flex items-center gap-2">
+                      <Layers className="w-3.5 h-3.5" />
+                      <span>Architecture &amp; System Flow</span>
+                    </h4>
+                    <p className="text-xs sm:text-sm text-[#E2DFD7] font-normal leading-relaxed">
+                      {selectedProject.architectureSummary}
+                    </p>
+                  </div>
+                )}
+
+                <div>
+                  <h4 className="text-xs font-mono uppercase tracking-widest text-[#2FA499] mb-3">
+                    Technical Highlights
+                  </h4>
+                  <div className="space-y-2">
+                    {selectedProject.highlights?.map((h, i) => (
+                      <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#E2DFD7]">
                         <CheckCircle2 className="w-4 h-4 text-[#2FA499] shrink-0 mt-0.5" />
-                        <span>{highlight}</span>
-                      </li>
+                        <span>{h}</span>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
-              )}
 
-              {/* Technologies */}
-              <div className="mb-8">
-                <h4 className="text-xs uppercase tracking-wider font-mono text-[#A8A398] mb-3">Technologies Deployed</h4>
-                <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-[#F6F4EE]">
-                  {selectedProject.techStack.map((tech, idx) => (
-                    <span key={tech} className="inline-flex items-center font-mono">
-                      <span>{tech}</span>
-                      {idx < selectedProject.techStack.length - 1 && (
-                        <span className="ml-3 text-[#6E6960]">/</span>
-                      )}
-                    </span>
-                  ))}
+                {/* Tech Stack */}
+                <div className="pt-4 border-t border-white/[0.08]">
+                  <h4 className="text-xs font-mono uppercase tracking-widest text-[#2FA499] mb-3">
+                    Applied Technologies
+                  </h4>
+                  <div className="flex flex-wrap gap-2 text-xs font-mono">
+                    {selectedProject.techStack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2.5 py-1 bg-[#1B1F24] border border-white/[0.1] text-[#F6F4EE] rounded-xs"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              {/* Footer Actions */}
-              <div className="pt-6 border-t border-white/[0.08] flex flex-wrap items-center justify-between gap-4">
-                <div className="flex items-center gap-4">
+                {/* Action Links */}
+                <div className="pt-6 border-t border-white/[0.08] flex flex-wrap items-center gap-3">
                   {selectedProject.liveLink && (
                     <a
                       href={selectedProject.liveLink}
@@ -419,7 +413,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="min-h-[44px] inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#0D0F11] bg-[#2FA499] hover:bg-[#3DB8AC] transition-colors rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#2FA499]"
                     >
-                      <span>Launch Live Environment</span>
+                      <span>Launch Live Site</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   )}
@@ -436,14 +430,6 @@ export default function Projects() {
                     </a>
                   )}
                 </div>
-
-                <button
-                  type="button"
-                  onClick={() => setSelectedProject(null)}
-                  className="min-h-[44px] text-xs font-mono uppercase tracking-wider text-[#A8A398] hover:text-[#F6F4EE] px-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#2FA499]"
-                >
-                  Dismiss
-                </button>
               </div>
             </motion.div>
           </div>

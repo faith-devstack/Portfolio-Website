@@ -1,6 +1,10 @@
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Eye, Download } from 'lucide-react';
 
-export default function About() {
+interface AboutProps {
+  onOpenResume?: () => void;
+}
+
+export default function About({ onOpenResume }: AboutProps) {
   return (
     <section id="about" className="py-24 lg:py-32 border-t border-white/[0.08] relative">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -9,7 +13,7 @@ export default function About() {
         <div className="max-w-2xl mb-12 lg:mb-16">
           <div className="flex items-center gap-2.5 text-xs font-mono uppercase tracking-widest text-[#2FA499] mb-3">
             <span>02</span>
-            <span className="text-[#6E6960]">/</span>
+            <span className="text-[#8E8A80]">/</span>
             <span>About</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-[#F6F4EE] tracking-tight">
@@ -26,61 +30,85 @@ export default function About() {
               "I build web applications with an engineer’s demand for stability and a designer’s respect for simplicity."
             </p>
 
-            <div className="space-y-4 text-base text-[#A8A398] leading-relaxed font-normal">
+            <div className="space-y-4 text-base sm:text-lg text-[#C8C4BA] leading-relaxed font-normal">
               <p>
-                I am <strong className="text-[#F6F4EE] font-medium">Faith Abejide</strong>, a full-stack developer based in Lagos, Nigeria, working with teams and clients worldwide. Over the past three years, my focus has been on building practical, production-ready web applications—from scalable backend APIs to polished client interfaces.
+                I am <strong className="text-[#F6F4EE] font-medium">Faith Abejide Tijesunimi</strong>, a full-stack developer and Mechatronics Engineering student at the Federal University of Technology, Minna. Over the past two years of client project delivery, I have focused on engineering robust digital solutions that solve real problems.
               </p>
               <p>
-                Rather than chasing ephemeral trends, I concentrate on foundational engineering: writing clean TypeScript, structuring normalized databases in PostgreSQL and MongoDB, and delivering fast, accessible user experiences with React and Next.js.
+                My toolkit centers on the MERN stack alongside TypeScript, Firebase, PostgreSQL, Supabase, and Drizzle ORM. Rather than chasing ephemeral hype, I prioritize maintainable architectures, strict type safety, responsive performance, and thoughtful user interactions.
               </p>
             </div>
 
-            <div className="pt-4 flex items-center gap-6 text-xs font-mono text-[#6E6960]">
-              <span>LAGOS, NIGERIA</span>
+            <div className="pt-4 flex flex-wrap items-center gap-5 sm:gap-6 text-xs font-mono text-[#9E988D]">
+              <span className="text-[#E2DFD7]">LAGOS &amp; MINNA, NIGERIA</span>
               <span>·</span>
-              <span>REMOTE / GLOBAL</span>
+              <span className="text-[#2FA499]">REMOTE WORLDWIDE</span>
               <span>·</span>
               <a
                 href="#contact"
                 className="text-[#2FA499] hover:text-[#3DB8AC] inline-flex items-center gap-1 transition-colors"
               >
                 <span>Get in touch</span>
-                <ArrowUpRight className="w-3 h-3" />
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
+
+            {/* Curriculum Vitae Actions */}
+            <div className="pt-6 border-t border-white/[0.08] flex flex-wrap items-center gap-3">
+              {onOpenResume && (
+                <button
+                  type="button"
+                  onClick={onOpenResume}
+                  className="min-h-[42px] inline-flex items-center gap-2 px-5 py-2.5 text-xs font-mono uppercase tracking-wider text-[#0D0F11] bg-[#F6F4EE] hover:bg-[#2FA499] hover:text-[#0D0F11] transition-colors rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#2FA499]"
+                >
+                  <Eye className="w-3.5 h-3.5" />
+                  <span>View Résumé</span>
+                </button>
+              )}
+
+              <a
+                href="/resume.pdf"
+                download="Faith_Abejide_Resume.pdf"
+                className="min-h-[42px] inline-flex items-center gap-2 px-5 py-2.5 text-xs font-mono uppercase tracking-wider text-[#F6F4EE] bg-[#14171A] hover:bg-[#1B1F24] border border-white/[0.12] hover:border-[#2FA499]/60 transition-colors rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#2FA499]"
+              >
+                <Download className="w-3.5 h-3.5 text-[#2FA499]" />
+                <span>Download CV (PDF)</span>
               </a>
             </div>
           </div>
 
           {/* Right Column: 3 Core Working Principles (5 cols) */}
-          <div className="lg:col-span-5 bg-[#14171A] border border-white/[0.08] p-7 sm:p-8 rounded-sm space-y-6">
-            <h3 className="text-xs font-mono uppercase tracking-widest text-[#2FA499]">
-              Core Principles
+          <div className="lg:col-span-5 bg-[#14171A] border border-white/[0.1] p-7 sm:p-8 rounded-sm space-y-6 shadow-lg">
+            <h3 className="text-xs font-mono uppercase tracking-widest text-[#2FA499] flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#2FA499]" />
+              <span>Core Engineering Principles</span>
             </h3>
 
-            <div className="space-y-5 text-sm">
+            <div className="space-y-5">
               <div className="pb-5 border-b border-white/[0.06]">
-                <h4 className="font-medium text-[#F6F4EE] mb-1 text-sm">
+                <h4 className="font-medium text-[#F6F4EE] mb-1.5 text-base">
                   01. End-to-End Ownership
                 </h4>
-                <p className="text-xs text-[#A8A398] leading-relaxed">
-                  Bridging UI design directly with API architecture and database models to prevent translation loss.
+                <p className="text-sm text-[#C8C4BA] leading-relaxed">
+                  Connecting visual components directly to backend APIs and schema designs, ensuring zero communication breakdown between layers.
                 </p>
               </div>
 
               <div className="pb-5 border-b border-white/[0.06]">
-                <h4 className="font-medium text-[#F6F4EE] mb-1 text-sm">
+                <h4 className="font-medium text-[#F6F4EE] mb-1.5 text-base">
                   02. Readable, Maintainable Code
                 </h4>
-                <p className="text-xs text-[#A8A398] leading-relaxed">
-                  Strict TypeScript types, defensive error handling, and clean modular boundaries that scale over time.
+                <p className="text-sm text-[#C8C4BA] leading-relaxed">
+                  Strict TypeScript types, defensive error boundaries, and self-documenting modular architecture that remains easy to maintain as systems scale.
                 </p>
               </div>
 
               <div>
-                <h4 className="font-medium text-[#F6F4EE] mb-1 text-sm">
-                  03. Tactile Performance
+                <h4 className="font-medium text-[#F6F4EE] mb-1.5 text-base">
+                  03. Tactile Performance &amp; Usability
                 </h4>
-                <p className="text-xs text-[#A8A398] leading-relaxed">
-                  Sub-second interactions, zero layout shifts, and mobile-friendly touch targets that feel effortless.
+                <p className="text-sm text-[#C8C4BA] leading-relaxed">
+                  Fast page rendering, accessible touch targets, and resilient state synchronization on both desktop and mobile networks.
                 </p>
               </div>
             </div>

@@ -91,44 +91,44 @@ export default function Testimonials() {
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#2FA499] mb-4">
               <span>05</span>
-              <span className="text-[#6E6960]">/</span>
+              <span className="text-[#8E8A80]">/</span>
               <span>Testimonials</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-[#F6F4EE] tracking-tight">
-              Client & collaborator{' '}
+              Client &amp; collaborator{' '}
               <span className="font-serif italic font-normal text-[#F6F4EE]">quotes</span>.
             </h2>
-            <p className="text-sm sm:text-base text-[#A8A398] mt-3 max-w-xl font-normal leading-relaxed">
+            <p className="text-base text-[#C8C4BA] mt-3 max-w-xl font-normal leading-relaxed">
               Verbatim reflections from founders, product managers, and engineering leads on technical delivery and collaboration.
             </p>
           </div>
 
           {/* Mode Switcher */}
-          <div className="flex items-center gap-1 p-1 bg-[#14171A] border border-white/[0.08] rounded-sm self-start md:self-auto">
+          <div className="flex items-center gap-1.5 p-1.5 bg-[#14171A] border border-white/[0.1] rounded-sm self-start md:self-auto">
             <button
               type="button"
               onClick={() => setViewMode('featured')}
               aria-pressed={viewMode === 'featured'}
-              className={`px-3 py-1.5 text-xs font-mono tracking-wider transition-colors rounded-xs flex items-center gap-1.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#2FA499] ${
+              className={`min-h-[38px] px-3.5 py-1.5 text-xs font-mono tracking-wider transition-colors rounded-xs flex items-center gap-1.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#2FA499] ${
                 viewMode === 'featured'
-                  ? 'bg-[#1B1F24] text-[#F6F4EE] shadow-xs'
-                  : 'text-[#A8A398] hover:text-[#F6F4EE]'
+                  ? 'bg-[#1B1F24] text-[#F6F4EE] border border-white/[0.1] shadow-xs'
+                  : 'text-[#B8B4AA] hover:text-[#F6F4EE]'
               }`}
             >
-              <Quote className="w-3 h-3 text-[#2FA499]" />
+              <Quote className="w-3.5 h-3.5 text-[#2FA499]" />
               <span>Focused View</span>
             </button>
             <button
               type="button"
               onClick={() => setViewMode('all')}
               aria-pressed={viewMode === 'all'}
-              className={`px-3 py-1.5 text-xs font-mono tracking-wider transition-colors rounded-xs flex items-center gap-1.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#2FA499] ${
+              className={`min-h-[38px] px-3.5 py-1.5 text-xs font-mono tracking-wider transition-colors rounded-xs flex items-center gap-1.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#2FA499] ${
                 viewMode === 'all'
-                  ? 'bg-[#1B1F24] text-[#F6F4EE] shadow-xs'
-                  : 'text-[#A8A398] hover:text-[#F6F4EE]'
+                  ? 'bg-[#1B1F24] text-[#F6F4EE] border border-white/[0.1] shadow-xs'
+                  : 'text-[#B8B4AA] hover:text-[#F6F4EE]'
               }`}
             >
-              <LayoutGrid className="w-3 h-3 text-[#2FA499]" />
+              <LayoutGrid className="w-3.5 h-3.5 text-[#2FA499]" />
               <span>All Quotes</span>
             </button>
           </div>
@@ -141,7 +141,7 @@ export default function Testimonials() {
             <div
               role="tablist"
               aria-label="Select a client quote"
-              className="flex flex-wrap items-center gap-2 sm:gap-4 mb-10 pb-6 border-b border-white/[0.06]"
+              className="flex flex-wrap items-center gap-2 sm:gap-4 mb-10 pb-6 border-b border-white/[0.08]"
             >
               {testimonials.map((item, index) => {
                 const isSelected = activeIndex === index;
@@ -158,15 +158,15 @@ export default function Testimonials() {
                     tabIndex={isSelected ? 0 : -1}
                     onClick={() => setActiveIndex(index)}
                     onKeyDown={(e) => handleTabKeyDown(e, index)}
-                    className={`group text-left px-3.5 py-2 transition-all rounded-xs border text-xs font-mono tracking-wide focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#2FA499] ${
+                    className={`min-h-[42px] group text-left px-4 py-2 transition-all rounded-xs border text-xs sm:text-sm font-mono tracking-wide focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#2FA499] ${
                       isSelected
-                        ? 'border-[#2FA499]/60 bg-[#14171A] text-[#F6F4EE]'
-                        : 'border-white/[0.06] bg-transparent text-[#6E6960] hover:text-[#A8A398] hover:border-white/[0.12]'
+                        ? 'border-[#2FA499] bg-[#1B1F24] text-[#F6F4EE]'
+                        : 'border-white/[0.1] bg-[#14171A] text-[#B8B4AA] hover:text-[#F6F4EE] hover:border-white/[0.2]'
                     }`}
                   >
-                    <span className="text-[#2FA499] mr-2">0{index + 1}</span>
-                    <span>{item.name}</span>
-                    <span className="hidden sm:inline text-[#6E6960] ml-2">/ {item.organization}</span>
+                    <span className="text-[#2FA499] mr-2 font-medium">0{index + 1}</span>
+                    <span className="font-medium">{item.name}</span>
+                    <span className="hidden sm:inline text-[#9E988D] ml-2">/ {item.organization}</span>
                   </button>
                 );
               })}
@@ -195,47 +195,40 @@ export default function Testimonials() {
 
                   {/* Editorial Pull Quote */}
                   <blockquote className="max-w-4xl">
-                    <p className="font-serif italic text-2xl sm:text-3xl lg:text-4xl text-[#F6F4EE] leading-[1.35] tracking-tight">
+                    <p className="font-serif italic text-2xl sm:text-3xl lg:text-4xl text-[#F6F4EE] leading-[1.38] tracking-tight">
                       {activeQuote.content}
                     </p>
                   </blockquote>
 
-                  {/* Clean Attribution Row */}
-                  <div className="pt-8 border-t border-white/[0.08] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                  {/* Attribution Details */}
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-white/[0.08]">
                     <div>
-                      <div className="text-base font-medium text-[#F6F4EE] tracking-tight">
+                      <div className="text-base sm:text-lg font-medium text-[#F6F4EE]">
                         {activeQuote.name}
                       </div>
-                      <div className="text-sm text-[#A8A398] mt-0.5 flex items-center gap-2">
-                        <span>{activeQuote.role}</span>
-                        <span className="text-[#6E6960]">·</span>
-                        <span>{activeQuote.organization}</span>
+                      <div className="text-xs sm:text-sm font-mono text-[#2FA499] mt-0.5">
+                        {activeQuote.role} · <span className="text-[#B8B4AA]">{activeQuote.organization}</span>
                       </div>
                     </div>
 
-                    {/* Manual Navigation Controls */}
-                    <div className="flex items-center gap-3 self-start sm:self-auto">
-                      <span className="text-xs font-mono text-[#6E6960]">
-                        <span className="text-[#F6F4EE]">0{activeIndex + 1}</span> / 0{testimonials.length}
-                      </span>
-                      <div className="flex items-center gap-1.5 ml-2">
-                        <button
-                          type="button"
-                          onClick={handlePrev}
-                          aria-label="Previous testimonial"
-                          className="w-9 h-9 flex items-center justify-center rounded-sm bg-[#14171A] border border-white/[0.12] text-[#A8A398] hover:text-[#F6F4EE] hover:border-[#2FA499]/60 hover:bg-[#1B1F24] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#2FA499]"
-                        >
-                          <ChevronLeft className="w-4 h-4" />
-                        </button>
-                        <button
-                          type="button"
-                          onClick={handleNext}
-                          aria-label="Next testimonial"
-                          className="w-9 h-9 flex items-center justify-center rounded-sm bg-[#14171A] border border-white/[0.12] text-[#A8A398] hover:text-[#F6F4EE] hover:border-[#2FA499]/60 hover:bg-[#1B1F24] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#2FA499]"
-                        >
-                          <ChevronRight className="w-4 h-4" />
-                        </button>
-                      </div>
+                    {/* Navigation Controls */}
+                    <div className="flex items-center gap-2 self-start sm:self-auto">
+                      <button
+                        type="button"
+                        onClick={handlePrev}
+                        aria-label="Previous quote"
+                        className="min-h-[42px] min-w-[42px] flex items-center justify-center text-[#B8B4AA] hover:text-[#F6F4EE] bg-[#14171A] hover:bg-[#1B1F24] border border-white/[0.1] hover:border-white/[0.2] rounded-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#2FA499]"
+                      >
+                        <ChevronLeft className="w-5 h-5" />
+                      </button>
+                      <button
+                        type="button"
+                        onClick={handleNext}
+                        aria-label="Next quote"
+                        className="min-h-[42px] min-w-[42px] flex items-center justify-center text-[#B8B4AA] hover:text-[#F6F4EE] bg-[#14171A] hover:bg-[#1B1F24] border border-white/[0.1] hover:border-white/[0.2] rounded-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#2FA499]"
+                      >
+                        <ChevronRight className="w-5 h-5" />
+                      </button>
                     </div>
                   </div>
                 </motion.div>
@@ -243,38 +236,36 @@ export default function Testimonials() {
             </div>
           </div>
         ) : (
-          /* VIEW 2: All Quotes (Calm editorial columns with subtle hairline separators) */
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+          /* VIEW 2: All Quotes Grid */
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((item, index) => (
               <div
                 key={item.id}
-                className="flex flex-col justify-between p-8 bg-[#14171A]/60 border border-white/[0.08] hover:border-white/[0.16] transition-colors rounded-sm"
+                className="bg-[#14171A] border border-white/[0.1] p-8 rounded-sm flex flex-col justify-between shadow-lg"
               >
                 <div>
-                  <div className="flex items-center justify-between text-xs font-mono text-[#6E6960] mb-6">
-                    <span className="text-[#2FA499]">0{index + 1}</span>
-                    <span>Direct Quote</span>
+                  <div className="flex items-center justify-between pb-3.5 border-b border-white/[0.08] mb-5">
+                    <span className="font-mono text-xs text-[#2FA499] font-medium">0{index + 1}</span>
+                    <Quote className="w-4 h-4 text-[#2FA499]/60" />
                   </div>
-
-                  <blockquote className="mb-8">
+                  <blockquote className="mb-6">
                     <p className="font-serif italic text-lg sm:text-xl text-[#F6F4EE] leading-relaxed">
                       "{item.content}"
                     </p>
                   </blockquote>
                 </div>
 
-                <div className="pt-6 border-t border-white/[0.08]">
-                  <div className="text-sm font-medium text-[#F6F4EE] tracking-tight">
-                    {item.name}
-                  </div>
-                  <div className="text-xs text-[#A8A398] mt-1 leading-snug">
-                    {item.role} <span className="text-[#6E6960]">·</span> {item.organization}
+                <div className="pt-4 border-t border-white/[0.08]">
+                  <div className="text-sm font-medium text-[#F6F4EE]">{item.name}</div>
+                  <div className="text-xs font-mono text-[#2FA499] mt-0.5">
+                    {item.role} · <span className="text-[#9E988D]">{item.organization}</span>
                   </div>
                 </div>
               </div>
             ))}
           </div>
         )}
+
       </div>
     </section>
   );
